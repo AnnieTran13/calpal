@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/HomePage/HomePage.css
 .title {
     padding-top: 50px;
 }
@@ -10,3 +11,17 @@
     padding-top: 200px;
     padding-bottom: 40px;
 }
+=======
+.title {
+    padding-top: 50px;
+}
+
+.subtitle {
+    color:grey;
+}
+
+.description {
+    padding-top: 200px;
+    padding-bottom: 40px;
+}
+>>>>>>> e9c051d04b2f1e941f2a4dcf189becfa86da7fd5:src/WelcomePage/HomePage.css

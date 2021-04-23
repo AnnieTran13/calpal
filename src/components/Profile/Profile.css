@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .title {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -5,4 +6,13 @@
 
 .caloriecard {
     background-color: aliceblue;
+=======
+.title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.caloriecard {
+    background-color: aliceblue;
+>>>>>>> e9c051d04b2f1e941f2a4dcf189becfa86da7fd5
 }
