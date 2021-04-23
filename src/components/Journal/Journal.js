@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "./Journal.css";
 import {
@@ -17,6 +17,7 @@ import {
   Paper,
   Button,
 } from "@material-ui/core";
+import recipie from "../Recipes/Recipe"
 
 const useStyles = makeStyles({
   table: {
@@ -51,13 +52,14 @@ const rows = [
   createData("Ice cream sandwich", 237),
   createData("Eclair", 262),
   createData("Cupcake", 305),
-  createData("Gingerbread", 356),
 ];
 
 function Journal() {
   const classes = useStyles();
-
-  const openRecipePage = () => {};
+  const openRecipePage = () => {
+    window.location="recipes";
+  };
+  const [calorisState] =useState();
 
   return (
     <>
@@ -71,7 +73,7 @@ function Journal() {
               <Typography variant="h5" component="h2">
                 Your calories
               </Typography>
-              <Typography align="center">0 calories</Typography>
+              <Typography align="center">{calorisState} calories</Typography>
             </CardContent>
           </Card>
         </Container>
