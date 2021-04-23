@@ -65,6 +65,10 @@ function Nav() {
               <MenuBookIcon />
               <ListItemText primary="Journal" />
             </ListItem>
+            <ListItem button to="/recipes" component={Link}>
+              <MenuBookIcon />
+              <ListItemText primary="Recipes" />
+            </ListItem>
           </List>
         </div>
       </Drawer>
