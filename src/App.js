@@ -5,6 +5,7 @@ import Nav from "./components/Nav/Nav";
 import HomePage from "./components/HomePage/HomePage";
 import Journal from "./components/Journal/Journal";
 import Profile from "./components/Profile/Profile";
+import Recipes from "./components/Recipes/Recipes";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/profile" component={Profile} />
           <Route path="/journal" component={Journal} />
+          <Route path="/recipes" component={Recipes} />
         </Switch>
       </div>
     </Router>

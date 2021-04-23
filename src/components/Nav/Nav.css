@@ -4,6 +4,7 @@ nav{
     align-items: center;
     min-height: 6vh;
     background-color: rgb(146, 162, 177);
+    font-size: large;
     color: white;
 }
 

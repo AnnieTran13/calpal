@@ -20,6 +20,9 @@ function Nav() {
         <Link style={navStyle} to="/journal">
           <li>Journal</li>
         </Link>
+        <Link style={navStyle} to="/recipes">
+          <li>Recipes</li>
+        </Link>
       </ul>
     </nav>
   );
