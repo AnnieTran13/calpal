@@ -1,3 +1,11 @@
+# SOEN 357 - Project
+## Team members
+Umaid Malik 
+Annie Tran 
+Cheikh Diagne 
+Oussama Zouhadi 
+Ying Fang 
+
 
 # Getting Started with Create React App
 
