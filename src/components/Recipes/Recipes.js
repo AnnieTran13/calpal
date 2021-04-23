@@ -43,7 +43,6 @@ const onSubmit = (e)=>{
 
   return (
       <div className = "Recipes">
-          <h1 onClick = {getData}>CalPal App</h1>
           <form className = "search-form" onSubmit = {onSubmit}>
               {alert !== "" && <Alert alert ={alert} />}
               <input type="text" placeholder = "Search Food" autoComplete ="off" onChange = {onChange} value={query}/>
