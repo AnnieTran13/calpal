@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { React, useState } from "react";
+=======
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
+>>>>>>> aef6a4f4de7255e5f4db847357253785f6fa7f73
 import "./Journal.css";
 import {
   withStyles,
@@ -16,7 +21,11 @@ import {
   Paper,
   Button,
 } from "@material-ui/core";
+<<<<<<< HEAD
 import { useSelector } from "react-redux";
+=======
+import recipie from "../Recipes/Recipe"
+>>>>>>> aef6a4f4de7255e5f4db847357253785f6fa7f73
 
 const useStyles = makeStyles({
   table: {
@@ -51,11 +60,11 @@ const rows = [
   createData("Ice cream sandwich", 237),
   createData("Eclair", 262),
   createData("Cupcake", 305),
-  createData("Gingerbread", 356),
 ];
 
 function Journal() {
   const classes = useStyles();
+<<<<<<< HEAD
   const points = useSelector((state) => state.points);
 
   const openRecipePage = () => {};
@@ -82,6 +91,29 @@ function Journal() {
           </CardContent>
         </Card>
       </Container>
+=======
+  const openRecipePage = () => {
+    window.location="recipes";
+  };
+  const [calorisState] =useState();
+
+  return (
+    <>
+      <React.Fragment>
+        <Container>
+          <Typography variant="h3" className="title">
+            Journal Page
+          </Typography>
+          <Card className="caloriecard">
+            <CardContent>
+              <Typography variant="h5" component="h2">
+                Your calories
+              </Typography>
+              <Typography align="center">{calorisState} calories</Typography>
+            </CardContent>
+          </Card>
+        </Container>
+>>>>>>> aef6a4f4de7255e5f4db847357253785f6fa7f73
 
       <Container className="table">
         <TableContainer component={Paper}>
