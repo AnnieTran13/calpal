@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "./Journal.css";
 import {
   withStyles,
@@ -16,6 +16,7 @@ import {
   Paper,
   Button,
 } from "@material-ui/core";
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles({
   table: {
@@ -55,129 +56,135 @@ const rows = [
 
 function Journal() {
   const classes = useStyles();
+  const points = useSelector((state) => state.points);
 
   const openRecipePage = () => {};
 
   return (
     <>
-      <React.Fragment>
-        <Container>
-          <Typography variant="h3" className="title">
-            Journal Page
-          </Typography>
-          <Card className="caloriecard">
-            <CardContent>
-              <Typography variant="h5" component="h2">
-                Your calories
-              </Typography>
-              <Typography align="center">0 calories</Typography>
-            </CardContent>
-          </Card>
-        </Container>
+      <Container>
+        <Typography variant="h3" className="title">
+          Your Journal
+        </Typography>
+      </Container>
+      <Container>
+        <Typography variant="h5" component="h2">
+          Your points : {points}
+        </Typography>
+      </Container>
+      <Container>
+        <Card className="caloriecard">
+          <CardContent>
+            <Typography variant="h5" component="h2">
+              Your calories
+            </Typography>
+            <Typography align="center">0 calories</Typography>
+          </CardContent>
+        </Card>
+      </Container>
 
-        <Container className="table">
-          <TableContainer component={Paper}>
-            <Table className={classes.table} aria-label="customized table">
-              <TableHead>
-                <TableRow>
-                  <StyledTableCell>Breakfast</StyledTableCell>
-                  <StyledTableCell align="center">Calories</StyledTableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <StyledTableRow key={row.name}>
-                    <StyledTableCell component="th" scope="row">
-                      {row.name}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {row.calories}
-                    </StyledTableCell>
-                  </StyledTableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <Button variant="contained" onClick={openRecipePage}>
-            Add food
-          </Button>
-        </Container>
+      <Container className="table">
+        <TableContainer component={Paper}>
+          <Table className={classes.table} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Breakfast</StyledTableCell>
+                <StyledTableCell align="center">Calories</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <StyledTableRow key={row.name}>
+                  <StyledTableCell component="th" scope="row">
+                    {row.name}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.calories}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <Button variant="contained" onClick={openRecipePage}>
+          Add food
+        </Button>
+      </Container>
 
-        <Container className="table">
-          <TableContainer component={Paper}>
-            <Table className={classes.table} aria-label="customized table">
-              <TableHead>
-                <TableRow>
-                  <StyledTableCell>Lunch</StyledTableCell>
-                  <StyledTableCell align="center">Calories</StyledTableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <StyledTableRow key={row.name}>
-                    <StyledTableCell component="th" scope="row">
-                      {row.name}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {row.calories}
-                    </StyledTableCell>
-                  </StyledTableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Container>
+      <Container className="table">
+        <TableContainer component={Paper}>
+          <Table className={classes.table} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Lunch</StyledTableCell>
+                <StyledTableCell align="center">Calories</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <StyledTableRow key={row.name}>
+                  <StyledTableCell component="th" scope="row">
+                    {row.name}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.calories}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Container>
 
-        <Container className="table">
-          <TableContainer component={Paper}>
-            <Table className={classes.table} aria-label="customized table">
-              <TableHead>
-                <TableRow>
-                  <StyledTableCell>Dinner</StyledTableCell>
-                  <StyledTableCell align="center">Calories</StyledTableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <StyledTableRow key={row.name}>
-                    <StyledTableCell component="th" scope="row">
-                      {row.name}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {row.calories}
-                    </StyledTableCell>
-                  </StyledTableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Container>
+      <Container className="table">
+        <TableContainer component={Paper}>
+          <Table className={classes.table} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Dinner</StyledTableCell>
+                <StyledTableCell align="center">Calories</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <StyledTableRow key={row.name}>
+                  <StyledTableCell component="th" scope="row">
+                    {row.name}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.calories}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Container>
 
-        <Container className="table">
-          <TableContainer component={Paper}>
-            <Table className={classes.table} aria-label="customized table">
-              <TableHead>
-                <TableRow>
-                  <StyledTableCell>Snacks</StyledTableCell>
-                  <StyledTableCell align="center">Calories</StyledTableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <StyledTableRow key={row.name}>
-                    <StyledTableCell component="th" scope="row">
-                      {row.name}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {row.calories}
-                    </StyledTableCell>
-                  </StyledTableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Container>
-      </React.Fragment>
+      <Container className="table">
+        <TableContainer component={Paper}>
+          <Table className={classes.table} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Snacks</StyledTableCell>
+                <StyledTableCell align="center">Calories</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <StyledTableRow key={row.name}>
+                  <StyledTableCell component="th" scope="row">
+                    {row.name}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.calories}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Container>
     </>
   );
 }

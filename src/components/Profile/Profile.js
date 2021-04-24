@@ -1,11 +1,13 @@
 import { React, useState } from "react";
 import "./Profile.css";
 import { Typography, Container, TextField, Button } from "@material-ui/core";
+import { setGoal } from "../../actions";
 
 function Profile() {
-  const [goal, setGoal] = useState();
+  const [goal, setGoals] = useState();
+
   const handleChange = (event) => {
-    setGoal(event.target.value);
+    setGoal(event.target.goal);
   };
 
   return (
