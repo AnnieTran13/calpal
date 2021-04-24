@@ -1,4 +1,7 @@
 # SOEN 357 - Project
+
+# CALPAL - The calorie counter
+
 ## Team members
 - Umaid Malik 
 - Annie Tran 
