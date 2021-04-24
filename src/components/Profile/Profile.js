@@ -31,7 +31,7 @@ function Profile() {
         />
       </Container>
       <Container className="container">
-        <Button variant="contained" color="primary" onClick={handleChange}>
+        <Button variant="contained" color="default" onClick={handleChange}>
           Save changes
         </Button>
       </Container>
