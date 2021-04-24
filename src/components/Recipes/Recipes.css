@@ -10,7 +10,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 
@@ -39,6 +39,7 @@ html {
   background-color: #d3d3d3;
   border-radius: 0.5rem;
   margin-bottom: 5rem;
+  margin-top:5rem;
   box-shadow: 1rem 2rem 5rem #aaa;
   position: relative;
 }
@@ -194,4 +195,28 @@ html {
   padding: 20px;
   border-radius: 5px;
   position: relative;
+}
+.recipe div.calories {
+ font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color:#40b48e;
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  padding: 0px 90px;
+  margin-top: 3px;
+  margin-bottom: 3px; 
+}
+.recipe div.totalweight{
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color:#40b48e;
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  padding: 0px 90px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
